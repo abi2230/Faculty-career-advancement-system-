@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty System</title>
+</head>
+<body>
+
+<h1>Faculty Career System</h1>
+
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="dept" placeholder="Department">
+<input type="text" id="ach" placeholder="Achievement">
+
+<button onclick="add()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+function add() {
+  let name = document.getElementById("name").value;
+  let dept = document.getElementById("dept").value;
+  let ach = document.getElementById("ach").value;
+
+  let li = document.createElement("li");
+  li.innerHTML = name + " - " + dept + " - " + ach;
+
+  document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
